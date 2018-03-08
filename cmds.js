@@ -148,10 +148,10 @@ exports.playCmd =rl=>{
 					rl.question(colorize(quiz.question.toString(),'black'), resultado=>{
 					if(resultado.toLowerCase().trim() === quiz.answer.toLowerCase().trim()){
 						puntuacion++;
-						log(`CORRECTO - Lleva ${puntuacion} aciertos.`);
+						log(`CORRECT - Lleva ${puntuacion} aciertos.`);
 						playOne();
 					}else{
-						log(`INCORRECTO`);
+						log(`INCORRECT`);
 						log(`Fin del examen. Aciertos:`);
 						biglog(puntuacion, 'green');
 						rl.prompt();
