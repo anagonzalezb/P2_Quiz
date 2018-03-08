@@ -139,9 +139,8 @@ exports.playCmd =rl=>{
 			biglog(puntuacion ,'magenta');
 			rl.prompt();
 		}else{
-			let id=  Math.floor((Math.random()*preguntas.length));
-			if(id >=0){
-				try{
+			let id= Math.abs(Math.floor((Math.random()*preguntas.length)));
+			  try{
 					
 					let quiz =model.getByIndex(preguntas[id]);
 					preguntas.splice(id,1);
@@ -153,7 +152,6 @@ exports.playCmd =rl=>{
 						playOne();
 					}else{
 						log(`inorrecto`);
-						log(`INCORRECTO`);
 						log(`Fin del examen. Aciertos:`);
 						biglog(puntuacion, 'green');
 						rl.prompt();
@@ -164,7 +162,7 @@ exports.playCmd =rl=>{
 					rl.prompt();
 				}
 			}	
-		}
+		
 	};
 	playOne();
 };
