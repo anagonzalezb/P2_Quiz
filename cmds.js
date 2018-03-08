@@ -151,6 +151,7 @@ exports.playCmd =rl=>{
 						log(`CORRECTO - Lleva ${puntuacion} aciertos.`);
 						playOne();
 					}else{
+						log(`INCORRECTO`);
 						log(`incorrecto`);
 						log(`Fin del examen. Aciertos:`);
 						biglog(puntuacion, 'green');
